@@ -54,10 +54,17 @@ def Rectangular(amp=1, duration=0, freq=0, offset=0, ts=None, ys=None):
                     ys[t] = ys[t] *amp
     return ys,ts
 
-
+#CREATING TIME-AXIS...
 time = np.linspace(0.0, 4*math.pi, num=11520, endpoint=True)/50
+#CREATING A SINE WAVE...
 sine50 = Sinusoid(time, 1, 50, 0)
-rect2, dummy = Rectangular(1, 2/50, 0, 1/50, time, ys=None)
+#CREATING A RECTANGULAR WAVE...
+rect2, t = Rectangular(1, 2/50, 0, 1/50, time, ys=None)
+#to plot the rectangular wave uncomment the following 2 lines...
+#plt.plot(t, rect2)
+#plt.show()
+#NOW, A CONVOLUTION PROCESS IS DONE ON THE SINE WAVE AND RECTANGULAR WAVE...
 conv = convolution(sine50, rect2)
+#PLOTTING THE RESULT...
 plt.plot(time, conv)
 plt.show()

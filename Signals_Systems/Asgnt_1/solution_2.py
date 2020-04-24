@@ -41,11 +41,12 @@ def RAMP(ys, ts, offset, mag=1, direction=1):
             ramp = mag*ts[it] - offset
             ys[it] = ys[it]*ramp
     return ys
-#
+#CONSTRUCTING TIME-AXIS AND SINE WAVE
 time = np.linspace(-2*math.pi, 2*math.pi, num=1152, endpoint=True)/50.0
 wave = Sinusoid(time, amp=1, freq = 50.0, offset=0)
 wave = RAMP(wave, time, offset=0, mag=1, direction=1)
-
+#PERFORMING THE SCALING AND REVERSING OPERATIONS...
+#AND EACH METHOD WRITTEN TO CREAT A WAVE, INHERENTLY HAS AN 'OFFSET' VARIABLE WHICH CAN BE USED FOR SHIFTING OPERATION.
 wave = SCALE(wave, mag=2.0)
 wave = REVERSE(wave)
 plt.plot(time, wave)

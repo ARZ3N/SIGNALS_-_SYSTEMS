@@ -60,7 +60,7 @@ dy_step = DIFFERENTIATION(step_wave, time)
 plt.plot(time, dy_ramp)
 
 plt.show()
-
+#IMPLEMENTING THE TRAPEZOIDAL INTEGRATION SCHEME ON THE SINUSOID CREATED EARLIER...
 int_wave = Integration(wave)
 print(int_wave)
 
