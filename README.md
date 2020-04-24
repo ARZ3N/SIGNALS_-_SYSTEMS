@@ -8,3 +8,7 @@ In addition to python, there are other libraries, modules and API's which are re
 -> JUPYTER-NOTEBOOKS
 All these can be easily installed using the built in Python Package Installer (pip). Instructions to install are quite simple
 and are available at the respective websites.
+Useful links:
+-> NUMPY- https://www.scipy.org/install.html
+-> MATPLOTLIB- https://matplotlib.org/users/installing.html
+-> JUPYTER-NOTEBOOKS- https://jupyter.org/install
